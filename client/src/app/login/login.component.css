@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(bridge.jpg) no-repeat;
+    background-size: cover;
+}
+.login-box{
+    width:280px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: rgba(76, 0, 130, 0.979);
+    box-sizing: border-box;
+}
+.login-box{
+    float: left;
+    font-size: 40px;
+    
+    padding: 13px 0;
+}
+.textbox{
+    width:100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid;
+}
+.textbox i{
+    widows: 26px;
+    float:left;
+    text-align: center;
+}
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+}
+.btn{
+    width:100%;
+    background: none;
+    border: 2px solid #9932CC;
+    color: indigo;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+    
+}
+.btn input[text="Sign in"]{
+    border: none;
+    outline:none;
+    background:#9932CC;
+    height: 40px;
+    color: blueviolet;
+    font-size: 18px;
+
+}
