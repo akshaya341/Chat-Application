@@ -7,7 +7,9 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
-import { provideForRootGuard } from '@angular/router/src/router_module';
+import { MaterialModule } from './material.module';
+
+
 
 @NgModule({
   declarations: [
@@ -35,5 +37,6 @@ import { provideForRootGuard } from '@angular/router/src/router_module';
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

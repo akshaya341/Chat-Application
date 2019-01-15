@@ -7,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+   Email:string;
+   password:string;
   constructor() { }
 
   ngOnInit() {
   }
 
-   loginUser(event)
-   {
-     event.preventDefault()
-     console.log(event);
-   }
+  
 }

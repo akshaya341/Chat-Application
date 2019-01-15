@@ -1,26 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Login form</title>
-    <link rel="stylesheet" href="style.css">
-    <body>
-      <div class="login-box">
-        
-        <h1>Login</h1>
 
-        <div class="textbox">
-            <i class="fa fa-user" aria-hidden="true"></i>
-          <input type="text" placeholder="Username" name="" value="">
-        </div>
-
-        <div class="textbox">
-            <i class="fa fa-lock" aria-hidden="true"></i>
-          <input type="password" placeholder="Password" name="" value="">
-        </div>
-        
-        <input class="btn" type="button" name="" value="Sign in">
-      </div>
-    </body>
-  </head>
-</html>
+<mat-toolbar>
+  <span>Login</span>
+</mat-toolbar>
+<mat-card class="my-card">
+   <mat-card-content>
+      <form class="my-form">
+         <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input  matInput  placeholder="Email" name="email">
+         </mat-form-field>
+         <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input  matInput  placeholder="Password" name="password">
+         </mat-form-field>
+      </form>
+   </mat-card-content>
+   <mat-card-actions>
+      <button mat-raised-button (click)="login()" color="primary">Sign in </button>
+   </mat-card-actions>
+</mat-card>
+  
