@@ -24,4 +24,8 @@ import {
     MatCardModule
   ]
 })
-export class MaterialModule {}       
+export class MaterialModule {
+  static forRoot(): any {
+    throw new Error("Method not implemented.");
+  }
+}       

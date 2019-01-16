@@ -1,13 +1,14 @@
-var express = require('express');
-var router = express.Router();
-var app = express();
 var users = require("../controller/usercontroller");
+var express = require('express');
+const router = express.Router();
+
+
 // console.log("users",users.registration);
-var authroute = require("../routers/authroute");
-router.post("/login", users.login);
-router.post('/register', users.registration);
+
+router.post('/login', users.login);
+router.post('/register', users.register);
 // router.get('/:id/list',users.usersList);
 // ConnectDB();
-router.use('/auth', authroute);
-app.use('/', router);
+//router.use('/auth', authroute);
+
 module.exports = router;
