@@ -4,6 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+
+
 const routes: Routes = [
   { 
     path: 'login',
@@ -15,8 +17,10 @@ const routes: Routes = [
   },
   { 
     path: 'dashboard',
-     component: DashboardComponent }
+     component: DashboardComponent },
+    
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

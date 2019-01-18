@@ -4,26 +4,27 @@
 <mat-card class="my-card">
    <mat-card-content>
   <form class="my-form">
-     <mat-form-field class="full-width">
+     <!-- <mat-form-field class="full-width"> -->
             <mat-label>First Name</mat-label>
-            <input  matInput  placeholder="First name"  name="fname"  required>
-         </mat-form-field>
-         <mat-form-field class="full-width">
+            <input  matInput  placeholder="First name"  name="firstname"  [(ngModel)]="model.firstname" >
+         <!-- </mat-form-field> -->
+         <!-- <mat-form-field class="full-width"> -->
             <mat-label>Last Name</mat-label>
-            <input  matInput  placeholder="Last Name" name="lname"  required>
-         </mat-form-field>
-         <mat-form-field class="full-width">
+            <input  matInput  placeholder="Last Name" name="lastname" [(ngModel)]="model.lastname" >
+         <!-- </mat-form-field> -->
+         <!-- <mat-form-field class="full-width"> -->
             <mat-label>Mobile number</mat-label>
-            <input  matInput  placeholder="Address" name="mobile number"  required>
-         </mat-form-field>
-         <mat-form-field class="full-width">
+            <input  matInput  placeholder="Mobile_Number" name="mobile number" [(ngModel)]="model.Mobile_Number">
+         <!-- </mat-form-field> -->
+         <!-- <mat-form-field class="full-width"> -->
             <mat-label>Email</mat-label>
-            <input  matInput  placeholder="Email" name="email">
-         </mat-form-field>
-         <mat-form-field class="full-width">
-            <mat-label>Confirm Password</mat-label>
-            <input  matInput  placeholder="Confirm Password"  name="password">
-         </mat-form-field>
+            <input  matInput  placeholder="Email" name="email"[(ngModel)]="model.email" >
+         <!-- </mat-form-field> -->
+         <!-- <mat-form-field class="full-width"> -->
+          <mat-label>Password</mat-label>
+          <input  matInput  placeholder=" Password"  name="password" [(ngModel)]="model.password" >
+       <!-- </mat-form-field> -->
+         
   </form>
 </mat-card-content>
    
