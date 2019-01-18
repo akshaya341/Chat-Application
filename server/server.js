@@ -4,9 +4,11 @@ const route= require('../server/router/router');
 const dbConfig = require('./configure/config.js');
 const mongoose = require('mongoose');
 const app = express();
+var cors = require('cors')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
+app.use(cors())
 app.use('/api',route);
 app.use(express.static('../client'));
 mongoose.connect(dbConfig.url, {
@@ -24,6 +26,6 @@ process.exit();
 // });
 
 // listen for requests
-app.listen(4200,() => {
-console.log("Server is listening on port 4200");
+app.listen(3000,() => {
+console.log("Server is listening on port 3000");
 });
