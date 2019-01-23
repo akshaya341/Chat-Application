@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpService {
   baseUrl = "http://localhost:3000/api/"
+  static postRequest: any;
   constructor(private http: HttpClient) { }
 
   postRequest(url, data) {

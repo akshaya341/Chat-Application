@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../services/http.service';
 import { Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -10,25 +12,24 @@ import { Router } from '@angular/router';
 export class RegistrationComponent implements OnInit {
 
   firstname: string;
-  lastlame: string;
-  Mobile_Number: Number;
+  lastname: string;
   email: string;
-  password:string;
+  password: string;
 
-  model={}
+
+  model = {}
   constructor(private httpService: HttpService, private router: Router) { }
 
   ngOnInit() {
   }
-  register()
-  {
-    this.httpService.postRequest('register',this.model).subscribe(data =>{
+
+  Register() {
+    this.httpService.postRequest('register', this.model).subscribe(data => {
       console.log(data);
-      this.router.navigate(['login']);
-    },
-    err => {
-      alert("Something went wrong.. ");
-    }
-  )
+      this.router.navigate(['register']);
+    }, err => {
+      alert('Something went wrong');
+    })
+  
   }
 }

@@ -1,0 +1,22 @@
+<mat-form-field class=border>
+<mat-form-field class=dashboard>
+    <span>Messenger</span>
+</mat-form-field>
+    
+
+    <mat-form-field class=users>
+        <div>
+            <button class=logout math-raised-button (click)="logout()" color=primary >Logout</button>
+       </div>
+        </mat-form-field>
+        <mat-form-field class=chaters>
+            
+        <div class="conversation-input">
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="Start chatting..." name="text" [(ngModel)]="text">
+                  <mat-icon matSuffix (click)="sendText(text)">send</mat-icon>
+                </mat-form-field>
+              </div> 
+      
+    </mat-form-field>
+</mat-form-field>

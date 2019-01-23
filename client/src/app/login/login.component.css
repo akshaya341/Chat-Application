@@ -1,2 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.my-form{
+   margin: auto;
+    max-width: 500px;
+    width: 200%;
+   border: 1px solid rgb(158, 158, 158);
+   padding: 20px;
+   border-radius: 10px;
+  text-align: center;
+
+    
+  }
+
+  .loginRegisterButton {
+    
+    width: -webkit-fill-available;
+    margin-top: 20px;
+    cursor: pointer ;
+  }
+
+  .my-card{
+ 
+   text-align: center;
+
+  }
+  .my-lable{
+    
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    border:center 50px;
+   
+  }
+   
+  .full-width {
+    box-align: center;
+    width: 100%;
+    
+   
+  
+  }
+  
