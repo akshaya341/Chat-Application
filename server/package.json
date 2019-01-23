@@ -14,7 +14,9 @@
   "author": "Akshay Kumar",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.3",
     "cors": "^2.8.5",
+    "express-validator": "^5.3.1",
     "nodemon": "^1.18.9"
   }
 }

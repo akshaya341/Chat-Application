@@ -1,13 +1,13 @@
 var mongoose = require("mongoose");
+const bcrypt=require('bcrypt');
+let saltRounds = 10;
 var mongoSchema = mongoose.Schema;
 var userSchema = new mongoSchema({
     'firstname': { type: String, },
     'lastname': { type: String, },
     'email': { type: String, },
     'password': { type: String, },
-    // 'conformpassword': {type: String,  required: true},
-    // 'mobile'     : { type: Number, required: true}
-
+   
 });
 const user = mongoose.model('userData', userSchema);
 
@@ -16,6 +16,7 @@ function userFunction() {
 }
 
 userFunction.prototype.save = (data, callback) => {
+    data.password =  bcrypt.hashSync(data.password,saltRounds);
     var newData = new user(data);
     newData.save(data, (err, result) => {
         if (err) {
@@ -27,19 +28,29 @@ userFunction.prototype.save = (data, callback) => {
 }
 
 userFunction.prototype.login = (data, callback) => {
+    
     user.findOne({ "email": data.email }, (err, result) => {
         if (err) {
             callback(err);
-        } else if (result != null) {
-            if (result.password == data.password) {
+        }
+         else 
+         {
+             if (result != null && result.email==data.email) {
+           
+            if (result !=null &&result.password,data.password) 
+            {
                 callback(null, result);
-            } else {
+  
+         } 
+         else {
                 callback("wrong password");
             }
         } else {
             callback("user not found")
         }
+    }
     })
 }
 
-module.exports = new userFunction();
+module.exports = new userFunction();  
+

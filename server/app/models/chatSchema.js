@@ -1,13 +1,29 @@
-var mongoose = require("mongoose");
-//var connect= require('../config/config');
-mongoose.connect('mongodb://localhost:27017/userdb', { useNewUrlParser: true });
 
-var mongoSchema = mongoose.Schema;
+const mongoose = require('mongoose');
+//Creating chat schema using moongose
+const ChatSchema = mongoose.Schema({
+    senderName: {
+        type: String
+    },
+    reciverName: {
+        type: String
+    },
+    message: {
+        type: String
+    },
+});
+var chat = mongoose.model('Chat', ChatSchema);
+function chatModel() {
 
-var userSchema = new mongoSchema({
-    'userid': { type: String, required: true },
-    'firstname': { type: String, required: true },
-    'message': { type: String, required: true },
-    'dateTime': { type: String, required: true }
-})
-module.exports = mongoose.model('chatlog', userSchema);
+}
+chatModel.prototype.save = (data, callback) => {
+    var newData = new chat(data);
+    newData.save((err, result) => {
+        if (err) {
+            callback(err);
+        } else {
+            callback(null, result);
+        }
+    })
+}
+module.exports = new chatModel();
